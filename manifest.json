@@ -1,0 +1,21 @@
+{
+  "manifest_version": 2,
+  "name": "WərdNərd",
+  "version": "1.0",
+
+  "description": "This extension allow you to highlight a word or phrase and get its etymology.",
+
+  "icons": {
+    "48": "icons/werdnerd-icon.svg"
+  },
+
+  "permissions": [
+    "activeTab"
+  ],
+
+  "browser_action": {
+    "default_icon": "icons/werdnerd-icon.svg",
+    "default_title": "WərdNərd",
+    "default_popup": "popup/info-panel.html"
+  }
+}
