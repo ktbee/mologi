@@ -1,21 +1,29 @@
 {
   "manifest_version": 2,
-  "name": "WərdNərd",
+  "name": "Mologi",
   "version": "1.0",
 
   "description": "This extension allow you to highlight a word or phrase and get its etymology.",
 
   "icons": {
-    "48": "icons/werdnerd-icon.svg"
+    "16": "icons/mologi-icon.svg",
+    "32": "icons/mologi-icon.svg",
+    "48": "icons/mologi-icon.svg",
+    "96": "icons/mologi-icon.svg"
   },
 
   "permissions": [
-    "activeTab"
+    "activeTab",
+    "contextMenus"
   ],
 
   "browser_action": {
-    "default_icon": "icons/werdnerd-icon.svg",
-    "default_title": "WərdNərd",
+    "default_icon": "icons/mologi-icon.svg",
+    "default_title": "Mologi",
     "default_popup": "popup/info-panel.html"
+  },
+
+  "background": {
+    "scripts": ["background.js"]
   }
 }
