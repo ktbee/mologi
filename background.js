@@ -1,16 +1,10 @@
-var searchTerm;
-
 browser.contextMenus.create({
   id: "Mologi",
   title: "Search with Mologi",
   contexts: ["selection"]
 });
 
-browser.contextMenus.onClicked.addListener(function(info, tab) {
-  searchTerm = info.selectionText;
-  console.log(searchTerm);
+browser.contextMenus.onClicked.addListener((info, tab) => {
+  browser.tabs.sendMessage(tab.id, {searchTerm: info.selectionText});
 });
 
-browser.tabs.executeScript(null, {
-    file: "/popup/mologi.js"
-});

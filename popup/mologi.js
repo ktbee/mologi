@@ -1,6 +1,9 @@
-function displaySearchResults() {
-  var resultsDiv = document.getElementById('results');
-  resultsDiv.innerHTML = "test";
-  console.log("alert");
+function displaySearchResults(request, sender, sendResponse) {
+  console.log(request);
+  // var resultsDiv = document.getElementById('results');
+  // var text = request;
+  // resultsDiv.appendChild(text);
+
 }
 
+browser.runtime.onMessage.addListener(displaySearchResults);
